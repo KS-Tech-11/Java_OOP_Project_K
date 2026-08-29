@@ -17,3 +17,41 @@ public class GlowSalon {
 
         return subtotal;
     }
+
+    // Print the receipt
+    public static void printReceipt(String[] items, double[] prices, int[] quantities) {
+
+        double grandTotal = 0;
+
+        System.out.println("===== GLOW SALON =====\n");
+        System.out.println("PRICE LIST");
+
+        for (int i = 0; i < items.length; i++) {
+            System.out.printf("%-12s UGX %.2f%n",
+                    items[i],
+                    prices[i]);
+        }
+
+        System.out.println("\n===== RECEIPT =====");
+
+        for (int i = 0; i < items.length; i++) {
+
+            double subtotal = calculateSubtotal(
+                    i,
+                    prices[i],
+                    quantities[i]);
+
+            grandTotal += subtotal;
+
+            System.out.printf(
+                    "%-12s x%d = UGX %.2f%n",
+                    items[i],
+                    quantities[i],
+                    subtotal);
+        }
+
+        System.out.println("----------------------------");
+        System.out.printf("TOTAL = UGX %.2f%n", grandTotal);
+    }
+
+}
