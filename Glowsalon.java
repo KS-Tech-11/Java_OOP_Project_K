@@ -1,4 +1,4 @@
-public class GlowSalon {
+public class Glowsalon {
 
     // works out the price after applying whatever discount applies to that service
     public static double calculateSubtotal(int index, double price, int quantity) {
@@ -52,6 +52,14 @@ public class GlowSalon {
 
         System.out.println("----------------------------");
         System.out.printf("TOTAL = UGX %.2f%n", grandTotal);
+
+        
     }
+    public static void main(String[] args) {
+        String[] items = {"Haircut", "Shave", "Manicure", "Braiding"};
+        double[] prices = {8000, 5000, 15000, 30000};
+        int[] quantities = {2, 2, 1, 2};
+    }
+    
 
 }
